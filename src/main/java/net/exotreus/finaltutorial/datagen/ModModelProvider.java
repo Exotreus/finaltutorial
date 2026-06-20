@@ -15,10 +15,23 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VOLATITE_BLOCK);
+        BlockStateModelGenerator.BlockTexturePool volatitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VOLATITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VOLATITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_VOLATITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
+
+        volatitePool.stairs(ModBlocks.VOLATITE_STAIRS);
+        volatitePool.slab(ModBlocks.VOLATITE_SLAB);
+
+        volatitePool.button(ModBlocks.VOLATITE_BUTTON);
+        volatitePool.pressurePlate(ModBlocks.VOLATITE_PRESSURE_PLATE);
+
+        volatitePool.fence(ModBlocks.VOLATITE_FENCE);
+        volatitePool.fenceGate(ModBlocks.VOLATITE_FENCE_GATE);
+        volatitePool.wall(ModBlocks.VOLATITE_WALL);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.VOLATITE_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.VOLATITE_TRAPDOOR);
     }
 
     @Override
@@ -27,6 +40,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SPAWNER_FRAGMENT, Models.GENERATED);
         itemModelGenerator.register(ModItems.VOLATITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOTEM_BASE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.IRON_CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.DIAMOND_CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.NETHERITE_CHISEL, Models.GENERATED);

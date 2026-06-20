@@ -3,10 +3,7 @@ package net.exotreus.finaltutorial.block;
 import net.exotreus.finaltutorial.FinalTutorial;
 import net.exotreus.finaltutorial.block.custom.MagicBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.block.MapColor;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -26,6 +23,99 @@ public class ModBlocks {
                     .strength(6.5F, 8F)
                     .sounds(BlockSoundGroup.METAL)
             ));
+
+    public static final Block VOLATITE_STAIRS = registerBlock("volatite_stairs",
+            new StairsBlock(ModBlocks.VOLATITE_BLOCK.getDefaultState(), AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(6.5F, 8F)
+                    .sounds(BlockSoundGroup.METAL)
+            )
+    );
+
+    public static final Block VOLATITE_SLAB = registerBlock("volatite_slab",
+            new SlabBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(6.5F, 8F)
+                    .sounds(BlockSoundGroup.METAL)
+            )
+    );
+
+    public static final Block VOLATITE_BUTTON = registerBlock("volatite_button",
+            new ButtonBlock(BlockSetType.IRON, 5, AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(6.5F, 8F)
+                    .sounds(BlockSoundGroup.METAL)
+                    .noCollision()
+            )
+    );
+
+    public static final Block VOLATITE_PRESSURE_PLATE = registerBlock("volatite_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(6.5F, 8F)
+                    .sounds(BlockSoundGroup.METAL)
+            )
+    );
+
+    public static final Block VOLATITE_FENCE = registerBlock("volatite_fence",
+            new FenceBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(6.5F, 8F)
+                    .sounds(BlockSoundGroup.METAL)
+            )
+    );
+
+    public static final Block VOLATITE_FENCE_GATE = registerBlock("volatite_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(6.5F, 8F)
+                    .sounds(BlockSoundGroup.METAL)
+            )
+    );
+
+    public static final Block VOLATITE_WALL = registerBlock("volatite_wall",
+            new WallBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(6.5F, 8F)
+                    .sounds(BlockSoundGroup.METAL)
+            )
+    );
+
+    public static final Block VOLATITE_DOOR = registerBlock("volatite_door",
+            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(6.5F, 8F)
+                    .sounds(BlockSoundGroup.METAL)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block VOLATITE_TRAPDOOR = registerBlock("volatite_trapdoor",
+            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(6.5F, 8F)
+                    .sounds(BlockSoundGroup.METAL)
+                    .nonOpaque()
+            )
+    );
 
     public static final Block VOLATITE_ORE = registerBlock("volatite_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(4, 6), AbstractBlock.Settings.create()
@@ -70,6 +160,20 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(VOLATITE_BLOCK);
+
+            entries.add(VOLATITE_STAIRS);
+            entries.add(VOLATITE_SLAB);
+
+            entries.add(VOLATITE_BUTTON);
+            entries.add(VOLATITE_PRESSURE_PLATE);
+
+            entries.add(VOLATITE_FENCE);
+            entries.add(VOLATITE_FENCE_GATE);
+            entries.add(VOLATITE_WALL);
+
+            entries.add(VOLATITE_DOOR);
+            entries.add(VOLATITE_TRAPDOOR);
+
             entries.add(VOLATITE_ORE);
             entries.add(DEEPSLATE_VOLATITE_ORE);
         });

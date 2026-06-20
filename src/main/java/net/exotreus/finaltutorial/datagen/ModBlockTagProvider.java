@@ -17,6 +17,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.VOLATITE_BLOCK)
+
+                .add(ModBlocks.VOLATITE_STAIRS)
+                .add(ModBlocks.VOLATITE_SLAB)
+
+                .add(ModBlocks.VOLATITE_BUTTON)
+                .add(ModBlocks.VOLATITE_PRESSURE_PLATE)
+
+                .add(ModBlocks.VOLATITE_FENCE)
+                .add(ModBlocks.VOLATITE_FENCE_GATE)
+                .add(ModBlocks.VOLATITE_WALL)
+
+                .add(ModBlocks.VOLATITE_DOOR)
+                .add(ModBlocks.VOLATITE_TRAPDOOR)
+
                 .add(ModBlocks.VOLATITE_ORE)
                 .add(ModBlocks.DEEPSLATE_VOLATITE_ORE);
 
@@ -31,7 +45,31 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.VOLATITE_BLOCK)
+
+                .add(ModBlocks.VOLATITE_STAIRS)
+                .add(ModBlocks.VOLATITE_SLAB)
+
+                .add(ModBlocks.VOLATITE_BUTTON)
+                .add(ModBlocks.VOLATITE_PRESSURE_PLATE)
+
+                .add(ModBlocks.VOLATITE_FENCE)
+                .add(ModBlocks.VOLATITE_FENCE_GATE)
+                .add(ModBlocks.VOLATITE_WALL)
+
+                .add(ModBlocks.VOLATITE_DOOR)
+                .add(ModBlocks.VOLATITE_TRAPDOOR)
+
                 .add(ModBlocks.VOLATITE_ORE)
                 .add(ModBlocks.DEEPSLATE_VOLATITE_ORE);
+
+        // for wooden fences, use BlockTags.WOODEN_FENCESCCCCCCCCCCCCCCCCCCCCCCCCC
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(ModBlocks.VOLATITE_FENCE);
+
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.VOLATITE_FENCE_GATE);
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.VOLATITE_WALL);
     }
 }

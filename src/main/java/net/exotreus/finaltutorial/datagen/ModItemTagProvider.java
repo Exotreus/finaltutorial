@@ -22,6 +22,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.VOLATITE)
                 .add(Items.COAL)
                 .add(ModBlocks.MAGIC_BLOCK.asItem())
-                .addTag(ItemTags.PLANKS);
+                .forceAddTag(ItemTags.PLANKS);
     }
 }

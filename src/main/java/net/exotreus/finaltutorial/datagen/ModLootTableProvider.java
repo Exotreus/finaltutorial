@@ -29,6 +29,19 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.VOLATITE_BLOCK);
         addDrop(ModBlocks.MAGIC_BLOCK);
 
+        addDrop(ModBlocks.VOLATITE_STAIRS);
+        addDrop(ModBlocks.VOLATITE_SLAB, slabDrops(ModBlocks.VOLATITE_SLAB));
+
+        addDrop(ModBlocks.VOLATITE_BUTTON);
+        addDrop(ModBlocks.VOLATITE_PRESSURE_PLATE);
+
+        addDrop(ModBlocks.VOLATITE_FENCE);
+        addDrop(ModBlocks.VOLATITE_FENCE_GATE);
+        addDrop(ModBlocks.VOLATITE_WALL);
+        
+        addDrop(ModBlocks.VOLATITE_DOOR, doorDrops(ModBlocks.VOLATITE_DOOR));
+        addDrop(ModBlocks.VOLATITE_TRAPDOOR);
+
         addDrop(ModBlocks.VOLATITE_ORE, multipleOreDrops(ModBlocks.VOLATITE_ORE, ModItems.VOLATITE, 1, 2));
         addDrop(ModBlocks.DEEPSLATE_VOLATITE_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_VOLATITE_ORE, ModItems.VOLATITE, 1, 2));
     }

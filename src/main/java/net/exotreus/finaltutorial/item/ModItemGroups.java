@@ -34,8 +34,23 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.finaltutorial.volatite_blocks_group"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.VOLATITE_BLOCK);
+
+                        entries.add(ModBlocks.VOLATITE_STAIRS);
+                        entries.add(ModBlocks.VOLATITE_SLAB);
+
+                        entries.add(ModBlocks.VOLATITE_BUTTON);
+                        entries.add(ModBlocks.VOLATITE_PRESSURE_PLATE);
+
+                        entries.add(ModBlocks.VOLATITE_FENCE);
+                        entries.add(ModBlocks.VOLATITE_FENCE_GATE);
+                        entries.add(ModBlocks.VOLATITE_WALL);
+
+                        entries.add(ModBlocks.VOLATITE_DOOR);
+                        entries.add(ModBlocks.VOLATITE_TRAPDOOR);
+
                         entries.add(ModBlocks.VOLATITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_VOLATITE_ORE);
+
                         entries.add(ModBlocks.MAGIC_BLOCK);
                     })
                     .build());
