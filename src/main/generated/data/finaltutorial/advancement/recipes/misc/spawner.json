@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_guardian_heart": {
+      "conditions": {
+        "items": [
+          {
+            "items": "finaltutorial:guardian_heart"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_spawner_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": "finaltutorial:spawner_fragment"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "finaltutorial:spawner"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_spawner_fragment",
+      "has_guardian_heart"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "finaltutorial:spawner"
+    ]
+  }
+}

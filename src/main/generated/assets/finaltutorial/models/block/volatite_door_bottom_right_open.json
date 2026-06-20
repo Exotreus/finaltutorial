@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "finaltutorial:block/volatite_door_bottom",
+    "top": "finaltutorial:block/volatite_door_top"
+  }
+}

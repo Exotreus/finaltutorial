@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_volatite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "finaltutorial:deepslate_volatite_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:volatite_from_smelting_deepslate_volatite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslate_volatite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:volatite_from_smelting_deepslate_volatite_ore"
+    ]
+  }
+}

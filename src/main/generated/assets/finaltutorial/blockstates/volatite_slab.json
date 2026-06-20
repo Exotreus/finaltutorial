@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "finaltutorial:block/volatite_slab"
+    },
+    "type=double": {
+      "model": "finaltutorial:block/volatite_block"
+    },
+    "type=top": {
+      "model": "finaltutorial:block/volatite_slab_top"
+    }
+  }
+}
