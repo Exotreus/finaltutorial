@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": { "tag": "minecraft:planks" },
+    "O": { "item": "minecraft:honeycomb" }
+  },
+  "pattern": [
+    "#O#",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "finaltutorial:totem_base"
+  }
+}

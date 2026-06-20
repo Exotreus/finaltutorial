@@ -1,0 +1,23 @@
+{
+  "item.finaltutorial.volatite": "Volatite",
+  "item.finaltutorial.spawner_fragment": "Spawner Fragment",
+  "item.finaltutorial.guardian_heart": "Guardian Heart",
+  "item.finaltutorial.totem_base": "Totem Base",
+
+  "item.finaltutorial.iron_chisel": "Iron Chisel",
+  "item.finaltutorial.diamond_chisel": "Diamond Chisel",
+  "item.finaltutorial.netherite_chisel": "Netherite Chisel",
+
+  "block.finaltutorial.volatite_block": "Volatite Block",
+  "item.finaltutorial.volatite_block": "Volatite Block",
+  "block.finaltutorial.volatite_ore": "Volatite Ore",
+  "item.finaltutorial.volatite_ore": "Volatite Ore",
+  "block.finaltutorial.deepslate_volatite_ore": "Deepslate Volatite Ore",
+  "item.finaltutorial.deepslate_volatite_ore": "Deepslate Volatite Ore",
+
+  "block.finaltutorial.magic_block": "Magic Block",
+  "item.finaltutorial.magic_block": "Magic Block",
+
+  "itemgroup.finaltutorial.volatite_items_group": "Volatite Items",
+  "itemgroup.finaltutorial.volatite_blocks_group": "Volatite Blocks"
+}

@@ -22,7 +22,7 @@
 			"net.exotreus.finaltutorial.FinalTutorialDataGenerator"
 		],
 		"client": [
-			"net.exotreus.finaltutorial.TutorialModClient"
+			"net.exotreus.finaltutorial.FinalTutorialClient"
 		]
 	},
 	"mixins": [

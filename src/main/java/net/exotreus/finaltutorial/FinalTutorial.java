@@ -1,7 +1,12 @@
 package net.exotreus.finaltutorial;
 
+import net.exotreus.finaltutorial.block.ModBlocks;
+import net.exotreus.finaltutorial.item.ModItemGroups;
+import net.exotreus.finaltutorial.item.ModItems;
+import net.exotreus.finaltutorial.util.ModFuels;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +16,11 @@ public class FinalTutorial implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
 
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+
+		ModFuels.registerModFuels();
 	}
 }
