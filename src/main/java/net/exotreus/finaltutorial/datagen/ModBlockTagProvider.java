@@ -1,8 +1,11 @@
 package net.exotreus.finaltutorial.datagen;
 
 import net.exotreus.finaltutorial.block.ModBlocks;
+import net.exotreus.finaltutorial.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -62,7 +65,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.VOLATITE_ORE)
                 .add(ModBlocks.DEEPSLATE_VOLATITE_ORE);
 
-        // for wooden fences, use BlockTags.WOODEN_FENCESCCCCCCCCCCCCCCCCCCCCCCCCC
+        // for wooden fences, use BlockTags.WOODEN_FENCES
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.VOLATITE_FENCE);
 
@@ -71,5 +74,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.VOLATITE_WALL);
+
+        getOrCreateTagBuilder(ModTags.Items.LAMP_GLASS)
+                .addOptionalTag(ConventionalItemTags.GLASS_BLOCKS)
+                .add(Items.TINTED_GLASS);
     }
 }

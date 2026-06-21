@@ -6,6 +6,7 @@ import net.exotreus.finaltutorial.item.ModItems;
 import net.exotreus.finaltutorial.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -15,6 +16,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
@@ -33,7 +35,83 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, VOLATITE_SMELTABLES, RecipeCategory.MISC, ModItems.VOLATITE, 1.0F, 200, "volatite");
         offerBlasting(exporter, VOLATITE_SMELTABLES, RecipeCategory.MISC, ModItems.VOLATITE, 1.0F, 100, "volatite");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.VOLATITE, RecipeCategory.MISC, ModBlocks.VOLATITE_BLOCK);
+//        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.VOLATITE, RecipeCategory.MISC, ModBlocks.VOLATITE_BLOCK);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOLATITE_BLOCK, 1)
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .input('A', ModItems.VOLATITE)
+                .criterion(hasItem(ModItems.VOLATITE), conditionsFromItem(ModItems.VOLATITE))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_block"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOLATITE_STAIRS, 4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_stairs"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOLATITE_SLAB, 6)
+                .pattern("AAA")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_slab"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOLATITE_FENCE, 3)
+                .pattern("ABA")
+                .pattern("ABA")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .input('B', Items.STICK)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_fence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOLATITE_FENCE_GATE)
+                .pattern("BAB")
+                .pattern("BAB")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .input('B', Items.STICK)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_fence_gate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOLATITE_WALL, 6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_wall"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.VOLATITE_DOOR, 3)
+                .pattern("AA")
+                .pattern("AA")
+                .pattern("AA")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_door"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.VOLATITE_TRAPDOOR, 2)
+                .pattern("AA")
+                .pattern("AA")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_trapdoor"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.VOLATITE_BUTTON)
+                .pattern("A")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_button"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.VOLATITE_PRESSURE_PLATE)
+                .pattern("AA")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_pressure_plate"));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOLATITE_STAIRS, ModBlocks.VOLATITE_BLOCK, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOLATITE_SLAB, ModBlocks.VOLATITE_BLOCK, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOLATITE_WALL, ModBlocks.VOLATITE_BLOCK, 1);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.SPAWNER)
                 .pattern("AAA")
@@ -78,5 +156,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 )
                 .criterion(hasItem(ModItems.DIAMOND_CHISEL), conditionsFromItem(ModItems.DIAMOND_CHISEL))
                 .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "netherite_chisel"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.VOLATITE_LAMP)
+                .pattern("ABA")
+                .pattern("BCB")
+                .pattern("ABA")
+                .input('A', ModBlocks.VOLATITE_BLOCK)
+                .input('B', Ingredient.fromTag(ModTags.Items.LAMP_GLASS))
+                .input('C', Blocks.REDSTONE_LAMP)
+                .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_lamp"));
     }
 }

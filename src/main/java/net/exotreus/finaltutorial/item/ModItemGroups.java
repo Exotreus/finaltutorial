@@ -48,6 +48,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.VOLATITE_DOOR);
                         entries.add(ModBlocks.VOLATITE_TRAPDOOR);
 
+                        entries.add(ModBlocks.VOLATITE_LAMP);
+
                         entries.add(ModBlocks.VOLATITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_VOLATITE_ORE);
 

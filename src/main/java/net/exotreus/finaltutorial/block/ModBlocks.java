@@ -2,6 +2,7 @@ package net.exotreus.finaltutorial.block;
 
 import net.exotreus.finaltutorial.FinalTutorial;
 import net.exotreus.finaltutorial.block.custom.MagicBlock;
+import net.exotreus.finaltutorial.block.custom.VolatiteLampBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
@@ -145,6 +146,16 @@ public class ModBlocks {
             )
     );
 
+    public static final Block VOLATITE_LAMP = registerBlock("volatite_lamp",
+            new VolatiteLampBlock(AbstractBlock.Settings.create()
+                    .mapColor(state -> state.get(VolatiteLampBlock.ENABLED) ? MapColor.WHITE : MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(4F, 3F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .luminance(state -> state.get(VolatiteLampBlock.ENABLED) ? 15 : 0))
+    );
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(FinalTutorial.MOD_ID, name), block);
@@ -179,6 +190,8 @@ public class ModBlocks {
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(VOLATITE_LAMP);
+
             entries.add(MAGIC_BLOCK);
         });
     }
