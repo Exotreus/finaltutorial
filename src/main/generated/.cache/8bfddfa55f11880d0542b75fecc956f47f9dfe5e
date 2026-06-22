@@ -1,4 +1,4 @@
-// 1.21	2026-06-22T09:18:45.5118107	FinalTutorial/Recipes
+// 1.21	2026-06-22T18:00:56.4680105	FinalTutorial/Recipes
 1ec221f639ca5bd40fdfb5fe0ad70126da802507 data\finaltutorial\recipe\volatite_fence.json
 9e0961fb79a58f3430b7bb3e1a44b89de6d0043e data\finaltutorial\advancement\recipes\redstone\volatite_door.json
 54dd4e895adae61ab2e465fb2eb62ca9177dfca7 data\finaltutorial\recipe\iron_chisel.json
@@ -53,6 +53,7 @@ a34f3f4c1676b0d895291c7cc948cd2a77aae3fa data\finaltutorial\advancement\recipes\
 fccbbd93f8e56cb7a70761be848b70deeca7b0bd data\finaltutorial\advancement\recipes\redstone\volatite_pressure_plate.json
 767c82d0f4f48758933c5aa703efeb374fe5765f data\finaltutorial\recipe\volatite_slab.json
 a2bc5c244bca5e2536ddc4328647c9fab5d19b4b data\finaltutorial\advancement\recipes\tools\onyx_axe.json
+260b36b4d4a0e57f5885c3bdd5dd398487536834 data\finaltutorial\advancement\recipes\tools\onyx_hammer.json
 50cde2cbdd21571a54d706a1dd4f1ec3d9a95b59 data\finaltutorial\recipe\onyx_hoe.json
 9bc5be4bac043d9411fa02b588db96255acf8a06 data\finaltutorial\advancement\recipes\tools\diamond_chisel.json
 fc1e1ae13fd9977b359d83d0b49bf3cb743099ec data\finaltutorial\advancement\recipes\tools\totem_base.json
@@ -61,3 +62,4 @@ aa3d06c6c6ab7d8dae02816559a64310935bb410 data\finaltutorial\advancement\recipes\
 b43b08bc034ff06bc16073d8c95d42e8ee68015d data\finaltutorial\advancement\recipes\misc\volatite_from_blasting_deepslate_volatite_ore.json
 811eb0ada60e9677b72eeaf1da79f21e5e0763ec data\finaltutorial\advancement\recipes\misc\onyx_from_blasting_raw_onyx.json
 e52b7d299d962c3ceff29f17712de5b4d01f122f data\finaltutorial\recipe\diamond_chisel.json
+6e7e0eb10f36616e733bf74a479880b266c9ced2 data\finaltutorial\recipe\onyx_hammer.json

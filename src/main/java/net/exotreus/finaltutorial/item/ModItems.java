@@ -2,6 +2,7 @@ package net.exotreus.finaltutorial.item;
 
 import net.exotreus.finaltutorial.FinalTutorial;
 import net.exotreus.finaltutorial.item.custom.ChiselItem;
+import net.exotreus.finaltutorial.item.custom.HammerItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -45,23 +46,27 @@ public class ModItems {
 
     public static final Item ONYX_SWORD = registerItem("onyx_sword",
             new SwordItem(ModToolMaterials.ONYX, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ONYX, 3, -2.4f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ONYX, 3, -2.4F))));
 
     public static final Item ONYX_PICKAXE = registerItem("onyx_pickaxe",
             new PickaxeItem(ModToolMaterials.ONYX, new Item.Settings()
-                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.ONYX, 1, -2.8f))));
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.ONYX, 1, -2.8F))));
 
     public static final Item ONYX_AXE = registerItem("onyx_axe",
             new AxeItem(ModToolMaterials.ONYX, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.ONYX, 6, -3.2f))));
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.ONYX, 6, -3.2F))));
 
     public static final Item ONYX_SHOVEL = registerItem("onyx_shovel",
             new ShovelItem(ModToolMaterials.ONYX, new Item.Settings()
-                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.ONYX, 1.5F, -3.0f))));
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.ONYX, 1.5F, -3.0F))));
 
     public static final Item ONYX_HOE = registerItem("onyx_hoe",
             new HoeItem(ModToolMaterials.ONYX, new Item.Settings()
-                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.ONYX, 0, -3f))));
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.ONYX, 0, -3.0F))));
+
+    public static final Item ONYX_HAMMER = registerItem("onyx_hammer",
+            new HammerItem(ModToolMaterials.ONYX, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.ONYX, 6, -4.0F))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(FinalTutorial.MOD_ID, name), item);
@@ -75,6 +80,7 @@ public class ModItems {
             entries.add(SPAWNER_FRAGMENT);
             entries.add(ONYX);
             entries.add(RAW_ONYX);
+            entries.add(TOTEM_BASE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> entries.add(GUARDIAN_HEART));
@@ -84,13 +90,13 @@ public class ModItems {
             entries.add(DIAMOND_CHISEL);
             entries.add(NETHERITE_CHISEL);
 
-            entries.add(TOTEM_BASE);
-
             entries.add(ONYX_SWORD);
             entries.add(ONYX_PICKAXE);
             entries.add(ONYX_AXE);
             entries.add(ONYX_SHOVEL);
             entries.add(ONYX_HOE);
+
+            entries.add(ONYX_HAMMER);
         });
     }
 }

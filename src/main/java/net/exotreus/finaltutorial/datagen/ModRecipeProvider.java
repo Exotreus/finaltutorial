@@ -216,5 +216,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', Items.STICK)
                 .criterion(hasItem(ModItems.ONYX), conditionsFromItem(ModItems.ONYX))
                 .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "onyx_hoe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ONYX_HAMMER)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern(" B ")
+                .input('A', ModItems.ONYX)
+                .input('B', Items.STICK)
+                .criterion(hasItem(ModItems.ONYX), conditionsFromItem(ModItems.ONYX))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "onyx_hammer"));
     }
 }

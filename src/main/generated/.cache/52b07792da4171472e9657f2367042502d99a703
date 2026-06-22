@@ -1,4 +1,4 @@
-// 1.21	2026-06-22T09:18:45.5128109	FinalTutorial/Model Definitions
+// 1.21	2026-06-22T18:00:56.4690099	FinalTutorial/Model Definitions
 bc6d3995f4eb21c49f82d4e3c95cb889537140bb assets\finaltutorial\blockstates\volatite_lamp.json
 d2768b4d1e40ede198fc2b410e2680f17bd273ea assets\finaltutorial\models\item\volatite_stairs.json
 d810f5cdfd80ff4fb9e5684119845217baa3d32a assets\finaltutorial\models\item\onyx_hoe.json
@@ -77,6 +77,7 @@ f5b75221da18d171c56f477cceb1ca3075fc10d4 assets\finaltutorial\models\block\magic
 6cc366e3e1fdd576b825e874c7cc2db10a1dbb81 assets\finaltutorial\models\item\volatite.json
 4d11f515b6987e0f596c38c9bbca80f24c4de0b5 assets\finaltutorial\blockstates\volatite_trapdoor.json
 cbbbda4c617b82ba664ba55c6a7f16d35fff2d39 assets\finaltutorial\models\block\volatite_door_bottom_left.json
+936622bafc1a7f4d81e9fa44b44dd888993077d1 assets\finaltutorial\models\item\onyx_hammer.json
 2bb2ccb447a2801389fb6a05e2b884024ea43255 assets\finaltutorial\models\item\volatite_button.json
 fdf36bf0d1d4e4dc69d138797683b8c2d4ba16f9 assets\finaltutorial\models\item\volatite_door.json
 0f5c6d3212f6194244ef5a4d2738d49d7ac47191 assets\finaltutorial\models\block\volatite_fence_gate_wall.json

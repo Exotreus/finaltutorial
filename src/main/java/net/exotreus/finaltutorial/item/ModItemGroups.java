@@ -34,6 +34,8 @@ public class ModItemGroups {
                         entries.add(ModItems.ONYX_AXE);
                         entries.add(ModItems.ONYX_SHOVEL);
                         entries.add(ModItems.ONYX_HOE);
+
+                        entries.add(ModItems.ONYX_HAMMER);
                     })
                     .build());
 

@@ -61,5 +61,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ONYX_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ONYX_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ONYX_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.ONYX_HAMMER, Models.HANDHELD);
     }
 }
