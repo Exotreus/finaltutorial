@@ -1,4 +1,4 @@
-// 1.21	2026-06-22T18:00:56.4690099	FinalTutorial/Model Definitions
+// 1.21	2026-06-22T18:14:57.3967859	FinalTutorial/Model Definitions
 bc6d3995f4eb21c49f82d4e3c95cb889537140bb assets\finaltutorial\blockstates\volatite_lamp.json
 d2768b4d1e40ede198fc2b410e2680f17bd273ea assets\finaltutorial\models\item\volatite_stairs.json
 d810f5cdfd80ff4fb9e5684119845217baa3d32a assets\finaltutorial\models\item\onyx_hoe.json
@@ -28,8 +28,8 @@ e1f8df946f882a7ae413a1df36a26721153a13fa assets\finaltutorial\models\block\volat
 0fd7df3fdc0c126d2525fb052d0523cf8f1484e0 assets\finaltutorial\models\item\totem_base.json
 bde5c596203fe4a275c984046ec07d11777c12f0 assets\finaltutorial\models\block\volatite_fence_post.json
 67ebe14c527df4e1ff63daafac7a3116dd9c9a9d assets\finaltutorial\models\item\netherite_chisel.json
-3bc268406c154f56c578b948f196000f8f0df3fa assets\finaltutorial\models\block\volatite_block.json
 799524631d0c06cd8cfa6eac9e5f3df146801b53 assets\finaltutorial\models\item\onyx_shovel.json
+3bc268406c154f56c578b948f196000f8f0df3fa assets\finaltutorial\models\block\volatite_block.json
 1431d59ef5228cc811ec56fdc973cda4be1d968b assets\finaltutorial\models\block\volatite_wall_inventory.json
 240652455688f613366ab9a97b63126f109d978c assets\finaltutorial\models\item\raw_onyx.json
 795c5aba493b2d8037fbf261cb17348d80667cb1 assets\finaltutorial\models\item\volatite_block.json

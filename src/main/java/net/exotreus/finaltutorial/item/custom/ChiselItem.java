@@ -182,6 +182,7 @@ public class ChiselItem extends Item {
                 newState = newState.with(property, oldState.get(property));
             }
         }
+
         return newState;
     }
 

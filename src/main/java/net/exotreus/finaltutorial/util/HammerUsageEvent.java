@@ -37,6 +37,6 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before {
             }
         }
 
-        return false;
+        return true;
     }
 }

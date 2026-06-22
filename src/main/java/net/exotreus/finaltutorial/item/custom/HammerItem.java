@@ -8,6 +8,12 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,5 +56,23 @@ public class HammerItem extends MiningToolItem {
         }
 
         return positions;
+    }
+
+    @Override
+    public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
+        if (isCorrectForDrops(stack, state)) {
+            world.playSound(
+                    null,
+                    pos.getX() + 0.5,
+                    pos.getY() + 0.5,
+                    pos.getZ() + 0.5,
+                    SoundEvents.BLOCK_ANVIL_LAND,
+                    SoundCategory.BLOCKS,
+                    0.2F,
+                    1.25F
+            );
+        }
+
+        return super.postMine(stack, world, state, pos, miner);
     }
 }
