@@ -50,7 +50,7 @@ public class ModBlocks {
                     .mapColor(MapColor.TERRACOTTA_RED)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool()
-                    .strength(6.5F, 8F)
+                    .strength(3F, 8F)
                     .sounds(BlockSoundGroup.METAL)
                     .noCollision()
             )
@@ -61,7 +61,7 @@ public class ModBlocks {
                     .mapColor(MapColor.TERRACOTTA_RED)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool()
-                    .strength(6.5F, 8F)
+                    .strength(4F, 8F)
                     .sounds(BlockSoundGroup.METAL)
             )
     );
@@ -71,7 +71,7 @@ public class ModBlocks {
                     .mapColor(MapColor.TERRACOTTA_RED)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool()
-                    .strength(6.5F, 8F)
+                    .strength(5F, 8F)
                     .sounds(BlockSoundGroup.METAL)
             )
     );
@@ -148,13 +148,22 @@ public class ModBlocks {
 
     public static final Block VOLATITE_LAMP = registerBlock("volatite_lamp",
             new VolatiteLampBlock(AbstractBlock.Settings.create()
-                    .mapColor(state -> state.get(VolatiteLampBlock.ENABLED) ? MapColor.WHITE : MapColor.TERRACOTTA_RED)
+                    .mapColor(state -> state.get(VolatiteLampBlock.ENABLED) ? MapColor.TERRACOTTA_WHITE : MapColor.TERRACOTTA_RED)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool()
                     .strength(4F, 3F)
                     .sounds(BlockSoundGroup.GLASS)
                     .luminance(state -> state.get(VolatiteLampBlock.ENABLED) ? 15 : 0))
     );
+
+    public static final Block ONYX_ORE = registerBlock("onyx_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(7, 10), AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(7.5F, 20F)
+                    .sounds(BlockSoundGroup.STONE)
+            ));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -187,6 +196,8 @@ public class ModBlocks {
 
             entries.add(VOLATITE_ORE);
             entries.add(DEEPSLATE_VOLATITE_ORE);
+
+            entries.add(ONYX_ORE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {

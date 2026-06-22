@@ -9,6 +9,9 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> NEEDS_ONYX_TOOL = createTag("needs_onyx_tool");
+        public static final TagKey<Block> INCORRECT_FOR_ONYX_TOOL = createTag("incorrect_for_onyx_tool");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(FinalTutorial.MOD_ID, name));
         }

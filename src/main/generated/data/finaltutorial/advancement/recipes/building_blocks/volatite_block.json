@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "finaltutorial:volatite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_volatite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "finaltutorial:volatite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_volatite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "finaltutorial:volatite_block"
+    ]
+  }
+}

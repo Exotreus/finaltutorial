@@ -3,6 +3,8 @@ package net.exotreus.finaltutorial.block.custom;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.ActionResult;
@@ -21,7 +23,14 @@ public class VolatiteLampBlock extends Block {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient()) {
-            world.setBlockState(pos, state.cycle(ENABLED));
+            BlockState newState = state.cycle(ENABLED);
+            world.setBlockState(pos, newState);
+
+            if (newState.get(ENABLED)) {
+                world.playSound(null, pos, SoundEvents.BLOCK_COPPER_BULB_TURN_ON, SoundCategory.BLOCKS, 1f, 1f);
+            } else {
+                world.playSound(null, pos, SoundEvents.BLOCK_COPPER_BULB_TURN_OFF, SoundCategory.BLOCKS, 1f, 1f);
+            }
         }
 
         return ActionResult.SUCCESS;

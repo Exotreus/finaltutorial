@@ -42,8 +42,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.VOLATITE_DOOR, doorDrops(ModBlocks.VOLATITE_DOOR));
         addDrop(ModBlocks.VOLATITE_TRAPDOOR);
 
+        addDrop(ModBlocks.VOLATITE_LAMP);
+
         addDrop(ModBlocks.VOLATITE_ORE, multipleOreDrops(ModBlocks.VOLATITE_ORE, ModItems.VOLATITE, 1, 2));
         addDrop(ModBlocks.DEEPSLATE_VOLATITE_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_VOLATITE_ORE, ModItems.VOLATITE, 1, 2));
+        addDrop(ModBlocks.ONYX_ORE, multipleOreDrops(ModBlocks.ONYX_ORE, ModItems.RAW_ONYX, 1, 1));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

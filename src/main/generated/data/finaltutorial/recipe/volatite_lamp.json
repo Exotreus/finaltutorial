@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "finaltutorial:volatite_block"
+    },
+    "B": {
+      "tag": "finaltutorial:lamp_glass"
+    },
+    "C": {
+      "item": "minecraft:redstone_lamp"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "finaltutorial:volatite_lamp"
+  }
+}

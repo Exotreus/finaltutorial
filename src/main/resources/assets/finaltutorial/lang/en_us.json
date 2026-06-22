@@ -1,5 +1,7 @@
 {
   "item.finaltutorial.volatite": "Volatite",
+  "item.finaltutorial.raw_onyx": "Raw Onyx",
+  "item.finaltutorial.onyx": "Onyx",
   "item.finaltutorial.spawner_fragment": "Spawner Fragment",
   "item.finaltutorial.guardian_heart": "Guardian Heart",
   "item.finaltutorial.totem_base": "Totem Base",
@@ -7,6 +9,12 @@
   "item.finaltutorial.iron_chisel": "Iron Chisel",
   "item.finaltutorial.diamond_chisel": "Diamond Chisel",
   "item.finaltutorial.netherite_chisel": "Netherite Chisel",
+
+  "item.finaltutorial.onyx_sword": "Onyx Sword",
+  "item.finaltutorial.onyx_pickaxe": "Onyx Pickaxe",
+  "item.finaltutorial.onyx_axe": "Onyx Axe",
+  "item.finaltutorial.onyx_shovel": "Onyx Shovel",
+  "item.finaltutorial.onyx_hoe": "Onyx Hoe",
 
   "block.finaltutorial.volatite_block": "Volatite Block",
   "item.finaltutorial.volatite_block": "Volatite Block",
@@ -34,8 +42,14 @@
   "block.finaltutorial.deepslate_volatite_ore": "Deepslate Volatite Ore",
   "item.finaltutorial.deepslate_volatite_ore": "Deepslate Volatite Ore",
 
+  "block.finaltutorial.onyx_ore": "Onyx Ore",
+  "item.finaltutorial.onyx_ore": "Onyx Ore",
+
   "block.finaltutorial.magic_block": "Magic Block",
   "item.finaltutorial.magic_block": "Magic Block",
+
+  "block.finaltutorial.volatite_lamp": "Volatite Lamp",
+  "item.finaltutorial.volatite_lamp": "Volatite Lamp",
 
   "itemgroup.finaltutorial.volatite_items_group": "Volatite Items",
   "itemgroup.finaltutorial.volatite_blocks_group": "Volatite Blocks"

@@ -1,6 +1,7 @@
 package net.exotreus.finaltutorial;
 
 import net.exotreus.finaltutorial.block.ModBlocks;
+import net.exotreus.finaltutorial.component.ModDataComponentTypes;
 import net.exotreus.finaltutorial.item.ModItemGroups;
 import net.exotreus.finaltutorial.item.ModItems;
 import net.exotreus.finaltutorial.util.ModFuels;
@@ -20,6 +21,8 @@ public class FinalTutorial implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModDataComponentTypes.registerDataComponentTypes();
 
 		ModFuels.registerModFuels();
 	}

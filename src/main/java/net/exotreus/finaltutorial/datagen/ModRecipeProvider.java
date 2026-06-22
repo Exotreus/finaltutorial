@@ -6,7 +6,6 @@ import net.exotreus.finaltutorial.item.ModItems;
 import net.exotreus.finaltutorial.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -16,7 +15,6 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
@@ -31,9 +29,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
         List<ItemConvertible> VOLATITE_SMELTABLES = List.of(ModBlocks.VOLATITE_ORE, ModBlocks.DEEPSLATE_VOLATITE_ORE);
+        List<ItemConvertible> RAW_ONYX_SMELTABLES = List.of(ModBlocks.ONYX_ORE);
+        List<ItemConvertible> ONYX_SMELTABLES = List.of(ModItems.RAW_ONYX);
 
         offerSmelting(exporter, VOLATITE_SMELTABLES, RecipeCategory.MISC, ModItems.VOLATITE, 1.0F, 200, "volatite");
         offerBlasting(exporter, VOLATITE_SMELTABLES, RecipeCategory.MISC, ModItems.VOLATITE, 1.0F, 100, "volatite");
+
+        offerSmelting(exporter, RAW_ONYX_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_ONYX, 1.0F, 600, "raw_onyx");
+        offerBlasting(exporter, RAW_ONYX_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_ONYX, 1.0F, 300, "raw_onyx");
+
+        offerBlasting(exporter, ONYX_SMELTABLES, RecipeCategory.MISC, ModItems.ONYX, 2.0F, 600, "onyx");
 
 //        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.VOLATITE, RecipeCategory.MISC, ModBlocks.VOLATITE_BLOCK);
 
@@ -166,5 +171,50 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', Blocks.REDSTONE_LAMP)
                 .criterion(hasItem(ModBlocks.VOLATITE_BLOCK), conditionsFromItem(ModBlocks.VOLATITE_BLOCK))
                 .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "volatite_lamp"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ONYX_SWORD)
+                .pattern("A")
+                .pattern("A")
+                .pattern("B")
+                .input('A', ModItems.ONYX)
+                .input('B', Items.STICK)
+                .criterion(hasItem(ModItems.ONYX), conditionsFromItem(ModItems.ONYX))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "onyx_sword"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ONYX_PICKAXE)
+                .pattern("AAA")
+                .pattern(" B ")
+                .pattern(" B ")
+                .input('A', ModItems.ONYX)
+                .input('B', Items.STICK)
+                .criterion(hasItem(ModItems.ONYX), conditionsFromItem(ModItems.ONYX))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "onyx_pickaxe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ONYX_AXE)
+                .pattern("AA")
+                .pattern("AB")
+                .pattern(" B")
+                .input('A', ModItems.ONYX)
+                .input('B', Items.STICK)
+                .criterion(hasItem(ModItems.ONYX), conditionsFromItem(ModItems.ONYX))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "onyx_axe"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ONYX_SHOVEL)
+                .pattern("A")
+                .pattern("B")
+                .pattern("B")
+                .input('A', ModItems.ONYX)
+                .input('B', Items.STICK)
+                .criterion(hasItem(ModItems.ONYX), conditionsFromItem(ModItems.ONYX))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "onyx_shovel"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ONYX_HOE)
+                .pattern("AA")
+                .pattern(" B")
+                .pattern(" B")
+                .input('A', ModItems.ONYX)
+                .input('B', Items.STICK)
+                .criterion(hasItem(ModItems.ONYX), conditionsFromItem(ModItems.ONYX))
+                .offerTo(exporter, Identifier.of(FinalTutorial.MOD_ID, "onyx_hoe"));
     }
 }

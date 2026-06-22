@@ -1,4 +1,4 @@
-// 1.21	2026-06-20T19:24:21.2568516	FinalTutorial/Block Loot Tables
+// 1.21	2026-06-22T09:18:45.5098105	FinalTutorial/Block Loot Tables
 2d7dacd0d7ffd40e0991b85b37ed7293d824bf72 data\finaltutorial\loot_table\blocks\volatite_block.json
 46f90a477f35d8d5b6c5e74af6987608d486db81 data\finaltutorial\loot_table\blocks\volatite_stairs.json
 f5751a164b4365cb724a250a4d48f8d0a8fbb66d data\finaltutorial\loot_table\blocks\volatite_trapdoor.json
@@ -8,7 +8,9 @@ c898088a2cc1631f91ad498ac5e53781ff217510 data\finaltutorial\loot_table\blocks\vo
 91e99cd930ac1a2be6ba5020bea0737a883002ef data\finaltutorial\loot_table\blocks\volatite_pressure_plate.json
 ca8f8ed428e703901b934e6dcecfbfabdf087697 data\finaltutorial\loot_table\blocks\deepslate_volatite_ore.json
 4fc1c096ff836761d3f3b6d2320914495ea83a1e data\finaltutorial\loot_table\blocks\volatite_ore.json
+898c19a1a7457a4465c96c83683864e7344f6bd9 data\finaltutorial\loot_table\blocks\volatite_lamp.json
 cf59dd5617aecbe6e399aa3afa3061c78e9b6350 data\finaltutorial\loot_table\blocks\volatite_fence.json
 897277810b604b6743d98cd8faf0c287d2d46f7e data\finaltutorial\loot_table\blocks\volatite_door.json
 8653cad807b9a2c3f139650b46d1ea8cf3caef60 data\finaltutorial\loot_table\blocks\volatite_fence_gate.json
 5ff977b9e77f0b68578ddc77649e25f1d2ec7574 data\finaltutorial\loot_table\blocks\volatite_slab.json
+6b6d648d8294a66a10fd675e1012fa8afd591a7f data\finaltutorial\loot_table\blocks\onyx_ore.json

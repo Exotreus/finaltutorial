@@ -1,5 +1,6 @@
 package net.exotreus.finaltutorial.item.custom;
 
+import net.exotreus.finaltutorial.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -8,6 +9,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -15,6 +17,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.property.Property;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -120,7 +123,6 @@ public class ChiselItem extends Item {
 
         for (List<Block> cycle : CHISEL_CYCLES) {
             if (cycle.contains(clickedBlock)) {
-
                 if (world instanceof ServerWorld serverWorld) {
                     int currentIndex = cycle.indexOf(clickedBlock);
                     int nextIndex = (currentIndex + 1) % cycle.size();
@@ -162,6 +164,8 @@ public class ChiselItem extends Item {
                         context.getStack().damage(1, serverWorld, serverPlayer,
                                 item -> serverPlayer.sendEquipmentBreakStatus(item, activeSlot));
                     }
+
+                    context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
                 }
 
                 return ActionResult.SUCCESS;
@@ -193,5 +197,14 @@ public class ChiselItem extends Item {
         }
 
         return true;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        if (type.isAdvanced() && stack.get(ModDataComponentTypes.COORDINATES) != null) {
+            tooltip.add(Text.literal("Last Block changed at: " + stack.get(ModDataComponentTypes.COORDINATES)));
+        }
+
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

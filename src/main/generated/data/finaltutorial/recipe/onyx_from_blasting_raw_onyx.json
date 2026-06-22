@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 2.0,
+  "group": "onyx",
+  "ingredient": {
+    "item": "finaltutorial:raw_onyx"
+  },
+  "result": {
+    "id": "finaltutorial:onyx"
+  }
+}

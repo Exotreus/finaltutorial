@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "enabled=false": {
+      "model": "finaltutorial:block/volatite_lamp"
+    },
+    "enabled=true": {
+      "model": "finaltutorial:block/volatite_lamp_on"
+    }
+  }
+}

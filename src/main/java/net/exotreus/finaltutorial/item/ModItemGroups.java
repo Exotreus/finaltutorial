@@ -20,10 +20,20 @@ public class ModItemGroups {
                         entries.add(ModItems.VOLATITE);
                         entries.add(ModItems.SPAWNER_FRAGMENT);
                         entries.add(ModItems.GUARDIAN_HEART);
+
                         entries.add(ModItems.IRON_CHISEL);
                         entries.add(ModItems.DIAMOND_CHISEL);
                         entries.add(ModItems.NETHERITE_CHISEL);
+
                         entries.add(ModItems.TOTEM_BASE);
+                        entries.add(ModItems.RAW_ONYX);
+                        entries.add(ModItems.ONYX);
+
+                        entries.add(ModItems.ONYX_SWORD);
+                        entries.add(ModItems.ONYX_PICKAXE);
+                        entries.add(ModItems.ONYX_AXE);
+                        entries.add(ModItems.ONYX_SHOVEL);
+                        entries.add(ModItems.ONYX_HOE);
                     })
                     .build());
 
@@ -52,6 +62,7 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.VOLATITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_VOLATITE_ORE);
+                        entries.add(ModBlocks.ONYX_ORE);
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
                     })

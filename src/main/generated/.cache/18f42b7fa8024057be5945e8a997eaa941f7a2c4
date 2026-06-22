@@ -1,9 +1,11 @@
-// 1.21	2026-06-20T19:24:21.2578523	FinalTutorial/Tags for minecraft:block
+// 1.21	2026-06-22T09:18:45.5118107	FinalTutorial/Tags for minecraft:block
 57e1b4ed28564da6fb6c54148b19dadc1c980040 data\minecraft\tags\block\fence_gates.json
 41a10efa50ea2adab03f2c814ca0921770e5ef21 data\minecraft\tags\block\mineable\axe.json
 41a10efa50ea2adab03f2c814ca0921770e5ef21 data\minecraft\tags\block\mineable\shovel.json
-be7882fcace210b9c1a637fff76ef0c7f96c1f6e data\minecraft\tags\block\mineable\pickaxe.json
+a249c46329a41538f49a564e1f14338aaf1be5a0 data\finaltutorial\tags\block\needs_onyx_tool.json
+7844eca0ad549327f26ccdc31b0fe99510b05f8f data\minecraft\tags\block\mineable\pickaxe.json
 41a10efa50ea2adab03f2c814ca0921770e5ef21 data\minecraft\tags\block\needs_stone_tool.json
-be7882fcace210b9c1a637fff76ef0c7f96c1f6e data\minecraft\tags\block\needs_iron_tool.json
+f866619c0038819de4e2e610287ef81e36939878 data\minecraft\tags\block\needs_iron_tool.json
+b7755291dde61cb969d6663029e153df091a0112 data\minecraft\tags\block\needs_diamond_tool.json
 02379790472582dd23c07848874a1af27d6b045e data\minecraft\tags\block\walls.json
 47feb9104c0bfb6919239da9cbd679e831918c99 data\minecraft\tags\block\fences.json

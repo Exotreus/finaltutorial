@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "finaltutorial:volatite_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "finaltutorial:volatite_stairs"
+  }
+}
